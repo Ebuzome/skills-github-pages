@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beauty Blog Masterpiece</title>
+  <title>The Blush & Bloom Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
@@ -17,6 +17,28 @@
       font-family: 'Open Sans', sans-serif;
       padding: 2rem;
     }
+
+    /* Blog Header */
+    .blog-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+    }
+    .blog-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .blog-tagline {
+      color: #aaa;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      letter-spacing: 1px;
+    }
+
     .blog-post {
       background: #1e1e1e;
       border-radius: 20px;
@@ -77,9 +99,16 @@
 </head>
 <body>
 
+  <!-- Blog Header -->
+  <header class="blog-header">
+    <h1 class="blog-title">The Blush & Bloom Blog</h1>
+    <p class="blog-tagline">Beauty. Bold. Brilliant.</p>
+  </header>
+
+  <!-- Blog Post 1 -->
   <div class="blog-post">
     <h2>1. Glow Like Royalty: 2025 Bridal Skin Secrets</h2>
-    <img src="https://images.unsplash.com/photo-1603275908697-7c686afbf27d?auto=format&fit=crop&w=1000&q=80" alt="Bridal Glow" />
+    <img src="assets/images/bridal-glow.jpg" alt="Bridal Glow Image" />
     <p>This year, glowing skin isn’t just a trend — it’s a standard. From dew-enhancing primers to golden-flecked foundations, brides are taking glow to the gods.</p>
     <div class="icons">
       <span onclick="likePost(0)">❤️ <span class="like-count">0</span></span>
@@ -99,9 +128,10 @@
     </div>
   </div>
 
+  <!-- Blog Post 2 -->
   <div class="blog-post">
     <h2>2. Bridal Lip Magic: From Soft Nudes to Bold Berries</h2>
-    <img src="https://images.unsplash.com/photo-1585577529540-58d56440bff2?auto=format&fit=crop&w=1000&q=80" alt="Bridal Lips" />
+    <img src="assets/images/bridal-lips.jpg" alt="Bridal Lips Image" />
     <p>Neutral tones are the wave, but bold brides are turning up with deep berry lips and perfectly lined pouts. Kiss-proof and photo-perfect.</p>
     <div class="icons">
       <span onclick="likePost(1)">❤️ <span class="like-count">0</span></span>
@@ -121,9 +151,10 @@
     </div>
   </div>
 
+  <!-- Blog Post 3 -->
   <div class="blog-post">
     <h2>3. Eye Drama Reimagined: Floating Liners & Glam Gems</h2>
-    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1000&q=80" alt="Eye Makeup" />
+    <img src="assets/images/eye-drama.jpg" alt="Eye Makeup Image" />
     <p>Gems near the lash line and floating liner shapes are trending. Whether minimal or maximal, the eyes are officially the crown jewel.</p>
     <div class="icons">
       <span onclick="likePost(2)">❤️ <span class="like-count">0</span></span>
@@ -157,4 +188,4 @@
   </script>
 
 </body>
-</html>
+  </html>
