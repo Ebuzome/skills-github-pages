@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Blog Masterpiece</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      padding: 2rem;
+    }
+    .blog-post {
+      background: #1e1e1e;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    .blog-post img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .icons {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      align-items: center;
+    }
+    .icons span {
+      cursor: pointer;
+    }
+    .like-count {
+      margin-left: 0.5rem;
+    }
+    .comments {
+      margin-top: 1rem;
+    }
+    .comment-box {
+      display: none;
+      background: #2c2c2c;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .comment-box p {
+      border-bottom: 1px solid #444;
+      padding: 0.5rem 0;
+    }
+    .show-comments {
+      background: none;
+      border: none;
+      color: #ffafbd;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blog-post">
+    <h2>1. Glow Like Royalty: 2025 Bridal Skin Secrets</h2>
+    <img src="https://images.unsplash.com/photo-1603275908697-7c686afbf27d?auto=format&fit=crop&w=1000&q=80" alt="Bridal Glow" />
+    <p>This year, glowing skin isn’t just a trend — it’s a standard. From dew-enhancing primers to golden-flecked foundations, brides are taking glow to the gods.</p>
+    <div class="icons">
+      <span onclick="likePost(0)">❤️ <span class="like-count">0</span></span>
+      <span>💬</span>
+      <span>📌</span>
+    </div>
+    <button class="show-comments" onclick="toggleComments(0)">View Comments</button>
+    <div class="comment-box">
+      <p>Wow! Didn't know golden primer was a thing.</p>
+      <p>This is so helpful! Bookmarked 🔥</p>
+      <p>I need this for my December wedding 😭</p>
+      <p>Makeup artists in Nigeria are on fire lately.</p>
+      <p>Do you recommend any products?</p>
+      <p>This blog is 10/10. Who’s the author?!</p>
+      <p>Can we get a skincare prep post next?</p>
+      <p>Sending this to my sister ASAP!</p>
+    </div>
+  </div>
+
+  <div class="blog-post">
+    <h2>2. Bridal Lip Magic: From Soft Nudes to Bold Berries</h2>
+    <img src="https://images.unsplash.com/photo-1585577529540-58d56440bff2?auto=format&fit=crop&w=1000&q=80" alt="Bridal Lips" />
+    <p>Neutral tones are the wave, but bold brides are turning up with deep berry lips and perfectly lined pouts. Kiss-proof and photo-perfect.</p>
+    <div class="icons">
+      <span onclick="likePost(1)">❤️ <span class="like-count">0</span></span>
+      <span>💬</span>
+      <span>🔖</span>
+    </div>
+    <button class="show-comments" onclick="toggleComments(1)">View Comments</button>
+    <div class="comment-box">
+      <p>That berry lip pic is giving everything!</p>
+      <p>Need that lipstick shade, drop name 🙏</p>
+      <p>I’m torn between nude and berry now 😩</p>
+      <p>The icons below look like Instagram. Love it.</p>
+      <p>Can’t believe this is just HTML. Sleek af.</p>
+      <p>Why does this feel like a ₦50k design?</p>
+      <p>Sharing this on my group chat rn.</p>
+      <p>Y’all better bookmark this blog fr.</p>
+    </div>
+  </div>
+
+  <div class="blog-post">
+    <h2>3. Eye Drama Reimagined: Floating Liners & Glam Gems</h2>
+    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1000&q=80" alt="Eye Makeup" />
+    <p>Gems near the lash line and floating liner shapes are trending. Whether minimal or maximal, the eyes are officially the crown jewel.</p>
+    <div class="icons">
+      <span onclick="likePost(2)">❤️ <span class="like-count">0</span></span>
+      <span>💬</span>
+      <span>📤</span>
+    </div>
+    <button class="show-comments" onclick="toggleComments(2)">View Comments</button>
+    <div class="comment-box">
+      <p>Now THIS is what I call premium content!</p>
+      <p>I’ve seen this trend on TikTok already!</p>
+      <p>Those lashes are giving butterfly wings 🦋</p>
+      <p>Adding this to my inspo board 💡</p>
+      <p>Can I use gems on traditional attire too?</p>
+      <p>This layout is elite. Teach me your ways.</p>
+      <p>Dark mode + gradient headers = 😍</p>
+      <p>Bookmarking this blog immediately.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleComments(index) {
+      const boxes = document.querySelectorAll('.comment-box');
+      boxes[index].style.display = boxes[index].style.display === 'block' ? 'none' : 'block';
+    }
+
+    function likePost(index) {
+      const likes = document.querySelectorAll('.like-count');
+      let current = parseInt(likes[index].innerText);
+      likes[index].innerText = current + 1;
+    }
+  </script>
+
+</body>
+</html>
